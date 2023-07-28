@@ -1,0 +1,49 @@
+<div class="video-preview" *ngIf="videoData" >
+  <a class="video-link" [href]="videoData.videoLink">
+    <div class="thumbnail-row">
+      <img class="thumbnail" [src]="videoData.thumbnailVideo" />
+      <div class="video-time">
+        {{ videoData.time }}
+      </div>
+    </div>
+  </a>
+  <div class="video-info-grid">
+    <a class="video-link" [href]="videoData.videoLink">
+      <div class="channel-picture">
+        <img
+          class="profile-pic"
+          [src]="videoData.profilePic"
+          alt="channel owner profile picture"
+        />
+        <div class="tooltip">
+          <img
+            class="profile-pic"
+            [src]="videoData.profilePic"
+            alt="channel owner profile picture"
+          />
+          <div>
+            <p><strong>{{videoData.channelOwner}}</strong></p>
+            <p>{{videoData.subscriberNumber}}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="video-info">
+      <a class="video-link" [href]="videoData.videoLink">
+        <div>
+          <p class="video-title">
+            {{videoData.videoTitle}}
+          </p>
+        </div>
+      </a>
+      <a class="video-link" [href]="videoData.channelLink">
+        <div>
+          <p class="video-author">{{videoData.channelOwner}}</p>
+        </div>
+      </a>
+      <div>
+        <p class="video-stats"><span>{{videoData.views}}</span> &#183; <span>{{videoData.timeLapse}}</span> </p>
+      </div>
+    </div>
+  </div>
+</div>

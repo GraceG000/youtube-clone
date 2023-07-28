@@ -1,0 +1,48 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+section {
+  display: flex;
+  height: 100%;
+}
+
+app-sidebar {
+  width: 200px;
+}
+
+
+
+.video-grid{
+  margin-top: 100px;  
+  flex: 1;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap:16px;
+  row-gap:30px;
+  position: relative;
+  margin-left:200px;
+  margin-right:20px;
+  z-index:50px;
+  }
+  
+  @media (max-width:750px) {
+      .video-grid {
+          grid-template-columns: 1fr 1fr;
+      }
+  }
+  
+  
+  @media(min-width:850px) and (max-width:999px) {
+      .video-grid{
+          grid-template-columns: 1fr 1fr 1fr;
+      }  
+  }
+  
+  @media (min-width:1000px){
+      .video-grid{
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+  }
